@@ -1,0 +1,56 @@
+body {
+    background-image: url("./background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    width: 100%;
+}
+
+#boss {
+    position: absolute;
+    top: -41px;
+    right: 282px;
+    width: 485px;
+}
+
+.parent {
+    position: relative;
+    top: 25vw;
+    left: 20vw;
+}
+
+#imageone {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 400px;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    animation: rotation 2s infinite linear;
+}
+
+#imagetwo {
+    position: absolute;
+    top:132px;
+    left: 132px;
+    width: 135px;
+    border-radius: 50%;
+    animation: rotation 2s infinite linear;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
