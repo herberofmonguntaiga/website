@@ -26,7 +26,6 @@ body {
     gap: 10px; /* Space between images */
     width: 80%;  /* Adjust the grid to fit inside the screen */
     height: 80%; /* Adjust the grid to fit inside the screen */
-    position: absolute;  /* Position it over the background */
 }
 
 /* Style for each image */
