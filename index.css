@@ -2,19 +2,17 @@ body {
     background-image: url("./background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     overflow: hidden;
     width: 100%;
     height: 100%;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .parent {
     position: relative;
-    width: 100vw;  /* Full width of the viewport */
-    height: 100vh; /* Full height of the viewport */
+    width: 100vw;  /* Full viewport width */
+    height: 100vh; /* Full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,23 +21,26 @@ body {
 /* CSS Grid for the 15 images */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-template-columns: repeat(5, 1fr); /* 5 images per row */
     grid-template-rows: repeat(3, 1fr);    /* 3 rows */
     gap: 10px; /* Space between images */
     width: 80%;  /* Adjust the grid to fit inside the screen */
     height: 80%; /* Adjust the grid to fit inside the screen */
-    position: absolute;
+    position: absolute;  /* Position it over the background */
 }
 
 /* Style for each image */
 .grid-item {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure images cover their grid cell without distortion */
+    object-fit: contain;  /* Ensures images are resized but maintain aspect ratio */
+    max-width: 100%;      /* Make sure the images do not exceed their grid cell */
+    max-height: 100%;     /* Ensure the image does not exceed the grid cell's height */
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    border: 1px solid #fff; /* Optional: temporary border for debugging */
 }
 
