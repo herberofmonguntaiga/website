@@ -7,13 +7,6 @@ body {
     height: 100%;
 }
 
-#boss {
-    position: absolute;
-    top: -41px;
-    right: 282px;
-    width: 485px;
-}
-
 .parent {
     position: relative;
     top: 25vw;
@@ -45,31 +38,4 @@ body {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-}
-
-@keyframes rotation {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(359deg);
-    }
-}
-
-@media only screen and (max-width: 1024px) {
-    #imageone {
-        width: 800px;
-        top: 520;
-        left: 0;
-    }
-
-    #imagetwo {
-        width: 270px;
-        top: 782px;
-        left: 270px;
-    }
-
-    #boss {
-        right: 150px;
-    }
 }
